@@ -90,8 +90,8 @@ xml ディレクトリにスキーマファイルを作成してください。
 
 今回のリリースブランチをチェックアウトしてマイグレーションクラスを作成します。
 
-    # 開発ブランチをチェックアウト
-    git co release/1.1.0
+    # 次のブランチをチェックアウト
+    git co develop -b release/1.1.0
     
     # マイグレーションクラスの作成
     php doctrine.php migrations:diff
@@ -111,7 +111,8 @@ xml ディレクトリにスキーマファイルを作成してください。
     php doctrine.php migrations:status --show-versions
     
     # リリースブランチにコミット
-    git commit
+    git add migrations/
+    git commit -m "create migrations"
 
 
 ## 超簡易コマンドリファレンス ##
