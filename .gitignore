@@ -1,2 +1,7 @@
 /vendor
 /composer.phar
+/entities
+/db-params.php
+/.settings
+/.buildpath
+/.project
