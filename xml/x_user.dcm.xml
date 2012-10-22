@@ -1,0 +1,28 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+		https://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+	<entity name="x_user">
+		
+		<indexes>
+			<index name="idx_user_01" columns="gid,uid"/>
+			<index name="idx_user_02" columns="email,age"/>
+		</indexes>
+		
+		<id name="uid" type="integer"><generator strategy="AUTO" /></id>
+		
+        <field name="user_name" type="string" />
+        <field name="email" type="string" length="100" nullable="true" />
+        <field name="age" type="smallint" />
+        <field name="birthday" type="datetime" />
+        <field name="flg" type="boolean" />
+        <field name="height" type="decimal" precision="5" scale="2" />
+        
+        <many-to-one target-entity="x_group" field="group">
+        	<join-column name="gid" referenced-column-name="gid" nullable="false" />
+        </many-to-one>
+        
+    </entity>
+    
+</doctrine-mapping>

@@ -1,0 +1,20 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+		https://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+	
+	<entity name="x_tagrefs">
+	
+		<id name="uid" type="integer" />
+		<id name="tid" type="integer" />
+		<id name="ref" type="integer" />
+		
+		<many-to-one target-entity="x_tags" field="tag">
+			<join-columns>
+				<join-column name="uid" referenced-column-name="uid" />
+				<join-column name="tid" referenced-column-name="tid" />
+			</join-columns>
+		</many-to-one>
+        
+    </entity>
+</doctrine-mapping>

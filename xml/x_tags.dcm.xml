@@ -1,0 +1,16 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+		https://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+	
+	<entity name="x_tags">
+	
+		<id name="uid" type="integer" />
+		<id name="tid" type="integer" />
+		
+		<many-to-one target-entity="x_user" field="user">
+			<join-column name="uid" referenced-column-name="uid" />
+		</many-to-one>
+	
+    </entity>
+</doctrine-mapping>
