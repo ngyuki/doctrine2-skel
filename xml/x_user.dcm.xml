@@ -18,6 +18,7 @@
         <field name="birthday" type="datetime" />
         <field name="flg" type="boolean" />
         <field name="height" type="decimal" precision="5" scale="2" />
+        <field name="xxx" type="integer" />
         
         <many-to-one target-entity="x_group" field="group">
         	<join-column name="gid" referenced-column-name="gid" nullable="false" />
