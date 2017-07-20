@@ -204,3 +204,10 @@ xml ディレクトリにスキーマファイルを作成してください。
 マイグレーションで過去のバージョンに戻す
 
     vendor/bin/doctrine migrations:migrate 20121003113654
+
+
+## さいごに
+
+- Doctrine ORM のスキーマ形式で書くのは辛すぎ
+- 複合主キーで外部キー制約が作成できない？
+  - `It is not possible to map entity 'T1' with a composite primary key as part of the primary key of another entity 'T2#id'.`
